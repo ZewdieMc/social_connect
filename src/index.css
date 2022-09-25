@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App{
+
+}
+
+.commentBox{
+  background-color: rgb(207, 206, 206);
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.post{
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.post >.user{
+  color: blue;
+  font-style: italic;font-weight: bold;
+  text-align: left;
+}
+.post >.content{
+  text-align: justify;
+}
+.comment{
+  background-color: aliceblue;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.comment >.user{
+  text-align: left;
+  padding: 10px;
+  color: blue;
+}
+.comment >.content{
+  text-align: justify;
+  padding: 10px;
+}

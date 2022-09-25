@@ -1,23 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-
+import CommentBox from './components/CommentBox';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <CommentBox
+     comments = {[{user:'Nathan',content:'That sounds cool'},{user:'zewdie',content:'That is good'}]}
+     />
     </div>
   );
 }
