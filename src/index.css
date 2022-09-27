@@ -45,6 +45,7 @@ code {
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+  width: 95%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -56,4 +57,10 @@ code {
 .comment >.content{
   text-align: justify;
   padding: 10px;
+}
+.user_name{
+  width: 90%;
+}
+.user_comment{
+  width: 90%;
 }

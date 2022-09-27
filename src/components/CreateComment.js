@@ -30,14 +30,14 @@ handleSubmit=e=>{
           <form className="createComment" onSubmit={this.handleSubmit}>
             <input
               type="text"
-              className="form-control"
+              className="form-control user_name"
               placeholder="Your name.."
               value={this.state.user}
               onChange={this.handleUserChange}
             />
             <textarea
               type="text"
-              className="form-control"
+              className="form-control user_comment"
               placeholder="Your comment?"
               value={this.state.content}
               onChange={this.handleContentChange}

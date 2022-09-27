@@ -4,6 +4,10 @@ import Comment from "./Comment";
 import CreateComment from "./CreateComment";
 import Post from "./Post";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+import CommentButton from "./CommentButton";
+import ShareButton from "./ShareButton";
+import LikeButton from "./LikeButton";
 export default class CommentBox extends Component {
   static defaultProps = {
     comments: [
@@ -23,6 +27,9 @@ export default class CommentBox extends Component {
     const newComments = comments.concat([comment]);
     this.setState({ comments: newComments });
   };
+  handleLikeClick = ()=>console.log('Liked')
+  handleShareClick = ()=>console.log('Shared')
+  handleCommentClick = ()=>console.log('Open CommentBox')
 
   render() {
     const comments = this.state.comments;
@@ -44,18 +51,18 @@ export default class CommentBox extends Component {
               <hr></hr>
               <div className="row">
                 <div className="col-3">
-                  <span>Like</span>
+                <LikeButton onLikeClick = {this.handleLikeClick}/>
                 </div>
-                <div className="col-3">
-                  <span>Comment</span>
+                <div className="col-4">
+                <CommentButton onCommentClick ={this.handleCommentClick}/>
                 </div>
-                <div className="col-3">
-                  <span>Share</span>
+                <div className="col-4">
+                <ShareButton onShareClick = {this.handleShareClick}/>
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-12 col-lg-3"></div>
+          <div className="col-12 col-lg-4"></div>
         </div>
       </div>
     );
