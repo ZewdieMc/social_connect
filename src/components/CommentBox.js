@@ -1,48 +1,67 @@
 import { Component } from "react";
+import PropTypes from 'prop-types';
 import Comment from "./Comment";
 import CreateComment from "./CreateComment";
 import Post from "./Post";
+import 'bootstrap/dist/css/bootstrap.min.css'
+export default class CommentBox extends Component {
+  static defaultProps = {
+    comments: [
+      { user: "Nathan", content: "That sounds cool" },
+      { user: "zewdie", content: "That is good saying" },
+    ],
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: this.props.comments,
+    };
+  }
+  handleCommentSubmit = (comment) => {
+    comment.id = Date.now();
+    const comments = this.state.comments;
+    const newComments = comments.concat([comment]);
+    this.setState({ comments: newComments });
+  };
 
-export default class CommentBox extends Component{
-    constructor(props){
-        super(props)
-        this.state ={
-            comments:this.props.comments
-        }
-
-    }
-    handleCommentSubmit =(comment)=>{
-    
-        comment.id = Date.now()
-        const comments = this.state.comments;
-        const newComments = comments.concat([comment]);
-        this.setState({comments:newComments})
-    }
-
-    render(){
-        const comments = this.state.comments;
-        return(
+  render() {
+    const comments = this.state.comments;
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-lg-3"> </div>
+          <div className="col-12 col-lg-6">
             <div className="commentBox">
-                <Post 
-                    id=''
-                    content = {`To Make working with something easier, it needs deligence and working hard at first.
-                    To Make working with something easier, it needs deligence and working hard at first.
-                    To Make working with something easier, it needs deligence and working hard at first.`}
-                    user = 'Mark'
+              <Post />
+              {comments.map((comment) => (
+                <Comment
+                  key={comment.content}
+                  user={comment.user}
+                  content={comment.content}
                 />
-                {
-                    comments.map(comment=>
-                        <Comment
-                            key = {comment.content}
-                            user = {comment.user}
-                            content = {comment.content}
-                        />
-                        )
-                }
-                <CreateComment 
-                handleCommentSubmit = {this.handleCommentSubmit}
-                />
+              ))}
+              <CreateComment handleCommentSubmit={this.handleCommentSubmit} />
+              <hr></hr>
+              <div className="row">
+                <div className="col-3">
+                  <span>Like</span>
+                </div>
+                <div className="col-3">
+                  <span>Comment</span>
+                </div>
+                <div className="col-3">
+                  <span>Share</span>
+                </div>
+              </div>
             </div>
-        )
-    }
+          </div>
+          <div className="col-12 col-lg-3"></div>
+        </div>
+      </div>
+    );
+  }
+}
+
+CommentBox.propTypes = {
+    comments:PropTypes.array.isRequired
 }

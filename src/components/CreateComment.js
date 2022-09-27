@@ -27,12 +27,25 @@ handleSubmit=e=>{
 }
     render() {
         return (
-
-            <form className="createComment" onSubmit={this.handleSubmit}>
-                <input type='text' placeholder="Your name.." value={ this.state.user} onChange={this.handleUserChange}/>
-                <input type='text' placeholder="Your comment?" value={this.state.content} onChange={this.handleContentChange}/>
-                <button type='Submit' className="postComment" >Post</button>
-        </form>
-        )
+          <form className="createComment" onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Your name.."
+              value={this.state.user}
+              onChange={this.handleUserChange}
+            />
+            <textarea
+              type="text"
+              className="form-control"
+              placeholder="Your comment?"
+              value={this.state.content}
+              onChange={this.handleContentChange}
+            />
+            <button type="Submit" className="btn btn-primary">
+              Post Comment
+            </button>
+          </form>
+        );
     }
 }

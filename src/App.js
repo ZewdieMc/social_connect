@@ -4,7 +4,6 @@ function App() {
   return (
     <div className="App">
      <CommentBox
-     comments = {[{user:'Nathan',content:'That sounds cool'},{user:'zewdie',content:'That is good'}]}
      />
     </div>
   );

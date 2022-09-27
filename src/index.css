@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .App{
-
+  overflow: scroll;
 }
 
 .commentBox{
@@ -25,7 +25,7 @@ code {
 }
 .post{
   background-color: aliceblue;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px;
   margin-top:10px;
   margin-bottom:10px;
@@ -42,7 +42,7 @@ code {
 }
 .comment{
   background-color: aliceblue;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: auto;
