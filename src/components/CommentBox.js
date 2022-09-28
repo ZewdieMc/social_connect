@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Comment from "./Comment";
 import CreateComment from "./CreateComment";
 import Post from "./Post";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-icons/font/bootstrap-icons.css'
 import CommentButton from "./CommentButton";
 import ShareButton from "./ShareButton";
 import LikeButton from "./LikeButton";
