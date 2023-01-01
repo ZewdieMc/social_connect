@@ -6,6 +6,7 @@ import Post from "./Post";
 import CommentButton from "./CommentButton";
 import ShareButton from "./ShareButton";
 import LikeButton from "./LikeButton";
+import Counter from "../learn/Counter";
 export default class CommentBox extends Component {
   static defaultProps = {
     comments: [
@@ -34,7 +35,9 @@ export default class CommentBox extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-12 col-lg-3"> </div>
+          <div className="col-12 col-lg-3">
+          <Counter />
+          </div>
           <div className="col-12 col-lg-6">
             <div className="commentBox">
               <Post />

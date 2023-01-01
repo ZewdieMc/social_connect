@@ -1,4 +1,5 @@
-import CommentBox from './components/CommentBox';
+import './App.css';
+import CommentBox from './components/forum/CommentBox';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link } from "react-router-dom";
